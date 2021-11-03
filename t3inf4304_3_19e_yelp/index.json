@@ -47,6 +47,7 @@
       }
     ],
     "intro": {
+      "code": "prep-env.sh",
       "text": "intro.md"
     },
     "finish": {
