@@ -11,8 +11,7 @@ CREATE TABLE staging.business (
         longitude float,
         stars real,
         review_count integer,
-        is_open boolean,
-        categories character varying(500)
+        is_open boolean
 );
 
 DROP TABLE IF EXISTS staging.business_hours;
@@ -29,6 +28,13 @@ CREATE TABLE staging.business_attributes(
     business_id character varying(25),
     attribute character varying(200),
     value character varying(200)
+);
+
+DROP TABLE IF EXISTS staging.business_categories;
+
+CREATE TABLE staging.business_categories (
+    business_id character varying(25),
+    category character varying(100)
 );
 
 DROP TABLE IF EXISTS staging.checkin;
@@ -72,6 +78,12 @@ CREATE TABLE staging.user(
     useful integer,
     funny integer,
     cool integer,
-    friends integer,
-    elite character varying(200)
+    friends integer
+);
+
+DROP TABLE IF EXISTS staging.user_elite;
+
+CREATE TABLE staging.user_elite(
+    user_id character varying(30),
+    elite_year character varying(5)
 );

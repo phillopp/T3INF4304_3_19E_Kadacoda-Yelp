@@ -9,5 +9,3 @@ psql
 
 \i /usr/src/assets/init.sql
 \i /usr/src/assets/create-staging.sql
-
-exit;
