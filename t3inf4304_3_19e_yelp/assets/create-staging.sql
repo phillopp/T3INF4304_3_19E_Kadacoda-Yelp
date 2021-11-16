@@ -9,10 +9,10 @@ CREATE TABLE staging.business (
         postal_code character varying(200),
         latitude float,
         longitude float,
-        stars smallint,
+        stars real,
         review_count integer,
         is_open boolean,
-        categorie character varying(500)
+        categories character varying(500)
 );
 
 DROP TABLE IF EXISTS staging.business_hours;
