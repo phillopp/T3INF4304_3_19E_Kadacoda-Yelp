@@ -2,4 +2,4 @@
 
 **Aufgabe:** Data Vault für Yelp-Daten.
 
-**Vorbereiteter Docker-Contaier:** Basiert auf dem Docker-Container 'abuckenhofer/columnarpostgresql'. Zusätzlich wurden die Yelp-Daten von Kaggle heruntergeladen.
+**Vorbereiteter Docker-Contaier:** Basiert auf dem Docker-Container 'abuckenhofer/columnarpostgresql'. Das Kaggel Datenset von Yelp wurde darauf heruntergeladen.
