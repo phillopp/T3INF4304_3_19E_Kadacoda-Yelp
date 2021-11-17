@@ -8,3 +8,5 @@ docker exec -it yelp_data psql
 
 \i /usr/src/assets/init.sql
 \i /usr/src/assets/create-staging.sql
+
+COPY staging.business FROM '/usr/src/assets/business.csv' DELIMITER ',' CSV HEADER;
