@@ -52,14 +52,6 @@
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "host01": [
-        {
-          "file": "*",
-          "target": "/root/assets/"
-        }
-      ]
     }
   },
   "environment": {
