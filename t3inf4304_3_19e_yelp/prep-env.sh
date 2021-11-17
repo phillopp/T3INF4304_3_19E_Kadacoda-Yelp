@@ -1,15 +1,15 @@
 #!/usr/bin/bash
 mkdir assets
 cd assets
-wget https://www.phillopp.de/dwh/business.csv
-wget https://www.phillopp.de/dwh/business_hours.csv
-wget https://www.phillopp.de/dwh/business_attributes.csv
-wget https://www.phillopp.de/dwh/business_categories.csv
-wget https://www.phillopp.de/dwh/checkin.csv
-wget https://www.phillopp.de/dwh/review.csv
-wget https://www.phillopp.de/dwh/tip.csv
-wget https://www.phillopp.de/dwh/user.csv
-wget https://www.phillopp.de/dwh/user_elite.csv
+wget https://phillopp.de/dwh/business.csv
+wget https://phillopp.de/dwh/business_hours.csv
+wget https://phillopp.de/dwh/business_attributes.csv
+wget https://phillopp.de/dwh/business_categories.csv
+wget https://phillopp.de/dwh/checkin.csv
+wget https://phillopp.de/dwh/review.csv
+wget https://phillopp.de/dwh/tip.csv
+wget https://phillopp.de/dwh/user.csv
+wget https://phillopp.de/dwh/user_elite.csv
 chmod -R 777 /root/assets/
 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres --name yelp_data -v /root:/usr/src/assets abuckenhofer/columnarpostgresql:latest
 
