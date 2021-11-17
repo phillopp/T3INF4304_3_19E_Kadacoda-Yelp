@@ -11,7 +11,7 @@ wget https://phillopp.de/dwh/tip.csv
 wget https://phillopp.de/dwh/user.csv
 wget https://phillopp.de/dwh/user_elite.csv
 chmod -R 777 /root/assets/
-docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres --name yelp_data -v /root:/usr/src/assets abuckenhofer/columnarpostgresql:latest
+docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres --name yelp_data -v /root/assets:/usr/src/assets abuckenhofer/columnarpostgresql:latest
 
 sleep 5s
 docker exec -u root yelp_data chmod -R 777 /usr/src/assets
