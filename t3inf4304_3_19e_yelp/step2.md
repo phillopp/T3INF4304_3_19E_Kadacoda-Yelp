@@ -11,6 +11,12 @@ Nach dem anlegen der Tabellen und laden der Daten, stehen folgende Tabellen zur 
 - user_friends(user_id, friend_id)
 - user_elite(user_id, elite_year)
 
+In einem Data Vault stehen drei Tabellen-Typen zur Verfügung:
+
+1. **Hub-Tabellen**: Stellen eindeutige Objekte mittels eines natürlichen Schlüssels dar.
+2. **Link-Tabellen**: Stellen die Verbindung zwischen Objekten dar.
+3. **Sat-Tabellen**: Beinhalten zusätzliche Informationen zu Hub- oder Link-Tabellen.
+
 
 
 ```
