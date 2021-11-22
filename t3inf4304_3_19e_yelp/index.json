@@ -6,11 +6,11 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Vorbereitung",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Hubs identifizieren",
         "text": "step2.md"
       },
       {
