@@ -8,6 +8,7 @@ Nach dem anlegen der Tabellen und laden der Daten, stehen folgende Tabellen zur 
 - review(review_id, business_id, user_id, stars, useful, funny, cool, review_text, review_date)
 - tip(user_id, business_id, tip_text, tip_date, compliment_count)
 - user(user_id, user_name, review_count, yelping_since, useful, funny, cool, friends)
+- user_friends(user_id, friend_id)
 - user_elite(user_id, elite_year)
 
 
