@@ -1,6 +1,6 @@
 Die Yelp-Daten befinden sich im Docker-Image unter `/usr/src/yelp_data/`.
 
-Im ersten Schritt werden zwei Schemata angelegt. Das erst ist `staging`, in dem die Tabellen der Rohdaten abgelegt werden. Im Schema `vault` werden die Daten im Data Vault Format abgelegt.
+Im ersten Schritt werden zwei Schemata angelegt. Das erst ist `staging`, in dem die Tabellen der Rohdaten abgelegt werden. Im Schema `vault` werden die Tabellen im Data Vault Format abgelegt.
 
 ```
 CREATE SCHEMA staging;
