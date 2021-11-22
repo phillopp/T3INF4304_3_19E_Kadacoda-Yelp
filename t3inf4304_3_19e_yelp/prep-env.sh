@@ -19,3 +19,4 @@ COPY staging.review FROM '/usr/src/yelp_data/review.csv' DELIMITER ',' CSV HEADE
 COPY staging.tip FROM '/usr/src/yelp_data/tip.csv' DELIMITER ',' CSV HEADER;
 COPY staging.user FROM '/usr/src/yelp_data/user.csv' DELIMITER ',' CSV HEADER;
 COPY staging.user_elite FROM '/usr/src/yelp_data/user_elite.csv' DELIMITER ',' CSV HEADER;
+COPY staging.user_friends FROM '/usr/src/yelp_data/user_friends.csv' DELIMITER ',' CSV HEADER;
