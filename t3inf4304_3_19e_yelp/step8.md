@@ -39,7 +39,7 @@ CREATE TABLE vault.sat_business_hours (
 
 CREATE TABLE vault.sat_business_attributes (
     business_id character varying(25),
-    load_date timestamp,
+    load_date timestamp default current_timestamp,
     ressource integer,
     attribute character varying(200),
     value character varying(200),
@@ -48,7 +48,7 @@ CREATE TABLE vault.sat_business_attributes (
 
 CREATE TABLE vault.sat_business_categories (
     business_id character varying(25),
-    load_date timestamp,
+    load_date timestamp default current_timestamp,
     ressource integer,
     category character varying(100),
     PRIMARY KEY (business_id, load_date),
@@ -59,7 +59,7 @@ CREATE TABLE vault.sat_business_categories (
 
 CREATE TABLE vault.sat_business_checkin (
     business_id character varying(25),
-    load_date timestamp,
+    load_date timestamp default current_timestamp,
     ressource integer,
     checkin_date date,
     PRIMARY KEY (business_id, load_date),

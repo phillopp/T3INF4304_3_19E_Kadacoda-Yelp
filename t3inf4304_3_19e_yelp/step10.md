@@ -5,9 +5,9 @@ Auch die Link-Tabellen `Review`und `Tip` haben weitere Attribute, die in eine Sa
 
 ```
 CREATE TABLE vault.sat_review (
-    business_id character varing(25),
+    business_id character varying(25),
     user_id character varying(30),
-    load_date timestamp,
+    load_date timestamp default current_timestamp,
     ressource integer,
     user_name character varying(200),
     review_count integer,
@@ -26,8 +26,8 @@ CREATE TABLE vault.sat_review (
 
 CREATE TABLE vault.sat_tip (
     business_id character varying(25),
-    user_id character varing(30),
-    load_date timestamp,
+    user_id character varying(30),
+    load_date timestamp default current_timestamp,
     ressource integer,
     elite_year character varying(5),
     PRIMARY KEY (business_id, user_id, load_date),

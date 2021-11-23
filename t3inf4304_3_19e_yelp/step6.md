@@ -9,7 +9,7 @@ CREATE TABLE vault.link_review (
     id character varying(30),
     business_id character varying(25),
     user_id character varying(30),
-    load_date timestamp,
+    load_date timestamp default current_timestamp,
     PRIMARY KEY (id),
     CONSTRAINT fk_business_id
         FOREIGN KEY(business_id) 
@@ -22,7 +22,7 @@ CREATE TABLE vault.link_review (
 CREATE TABLE vault.link_user_friends (
     user_id character varying(30),
     friend_id character varying(30),
-    load_date timestamp,
+    load_date timestamp default current_timestamp,
     PRIMARY KEY (user_id, friend_id),
     CONSTRAINT fk_user_id
         FOREIGN KEY(user_id) 
@@ -35,7 +35,7 @@ CREATE TABLE vault.link_user_friends (
 CREATE TABLE vault.link_tip (
     business_id character varying(25),
     user_id character varying(30),
-    load_date timestamp,
+    load_date timestamp default current_timestamp,
     PRIMARY KEY (business_id, user_id),
     CONSTRAINT fk_business_id
         FOREIGN KEY(business_id) 
