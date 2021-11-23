@@ -1,8 +1,24 @@
-Im vorherigen Schritt wurden die Tabellen `Business` und `Review` als Hub-Tabellen identifiziert. Auch wurde beschrieben, dass nur eindeudige Attribute in der Hub-Tabelle gespeichert werden.
+Im vorherigen Schritt wurden die Tabellen `Business` und `User` als Hub-Tabellen identifiziert. Auch wurde beschrieben, dass nur eindeudige Attribute in der Hub-Tabelle gespeichert werden.
 Demnach sollten die Tabellen wie folgt aussehen:
 
 - business(business_id~~, name, address, city, state, postal_code, latitude, longitude, stars, review_count, is_open~~)
 - user(user_id~~, user_name, review_count, yelping_since, useful, funny, cool, friends~~)
+
+Die zwei Hub-Tabellen werden mit dem folgenden Befehl erstellt.
+
+```
+CREATE TABLE vault.business (
+        id character varying(25),
+        load_date timestamp,
+        PRIMARY KEY (id)
+);
+
+CREATE TABLE vault.user (
+        id character varying(25),
+        load_date timestamp,
+        PRIMARY KEY (id)
+);
+```{{execute T1}}
 
 ---
 

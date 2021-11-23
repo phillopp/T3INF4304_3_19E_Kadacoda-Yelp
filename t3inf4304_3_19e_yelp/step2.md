@@ -16,21 +16,3 @@ In einem Data Vault stehen drei Tabellen-Typen zur Verfügung:
 1. **Hub-Tabellen**: Stellen eindeutige Objekte mittels eines natürlichen Schlüssels dar.
 2. **Link-Tabellen**: Stellen die Verbindung zwischen Objekten dar.
 3. **Sat-Tabellen**: Beinhalten zusätzliche Informationen zu Hub- oder Link-Tabellen.
-
-
-
-```
-CREATE TABLE staging.business (
-        business_id character varying(25),
-        name character varying(200),
-        address character varying(500),
-        city character varying(200),
-        state character varying(200),
-        postal_code character varying(200),
-        latitude float,
-        longitude float,
-        stars real,
-        review_count integer,
-        is_open boolean
-);
-```{{execute T1}}
