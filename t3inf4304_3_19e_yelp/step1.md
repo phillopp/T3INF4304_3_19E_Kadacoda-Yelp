@@ -85,7 +85,7 @@ CREATE TABLE staging.user_friends(
     user_id character varying(30),
     friend_id character varying(30)
 );
-```{{execute T2}}
+```{{execute T1}}
 
 Der letzte Schritt für diese Seite ist das Laden der Yelp-Daten in die Tabelle. Dies erfolgt mittels CSV-Dateien und dem COPY-Befehl. Im folgenden ist der Befehl beispielhaft für die Business-Daten.
 
@@ -100,6 +100,6 @@ COPY staging.tip FROM '/usr/src/yelp_data/tip.csv' DELIMITER ',' CSV HEADER;
 COPY staging.user FROM '/usr/src/yelp_data/user.csv' DELIMITER ',' CSV HEADER;
 COPY staging.user_elite FROM '/usr/src/yelp_data/user_elite.csv' DELIMITER ',' CSV HEADER;
 COPY staging.user_friends FROM '/usr/src/yelp_data/user_friends.csv' DELIMITER ',' CSV HEADER;
-```{{execute T3}
+```{{execute T1}
 
 Ist der Befehl erfolgreich ausgeführt worden, gibt die Kommandozeile `COPY [Anzahl Datensätze]` aus.
