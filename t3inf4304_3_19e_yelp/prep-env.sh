@@ -5,6 +5,7 @@ docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres --name yelp_data phillo
 # sleep 5s
 
 docker exec -it yelp_data bash
+sleep 2s
 psql
 
 # \i /usr/src/assets/init.sql
