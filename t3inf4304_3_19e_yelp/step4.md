@@ -7,16 +7,16 @@ Demnach sollten die Tabellen wie folgt aussehen:
 Die zwei Hub-Tabellen werden mit dem folgenden Befehl erstellt.
 
 ```
-CREATE TABLE vault.business (
-        id character varying(25),
-        load_date timestamp,
-        PRIMARY KEY (id)
+CREATE TABLE vault.hub_business (
+    id character varying(25),
+    load_date timestamp,
+    PRIMARY KEY (id)
 );
 
-CREATE TABLE vault.user (
-        id character varying(25),
-        load_date timestamp,
-        PRIMARY KEY (id)
+CREATE TABLE vault.hub_user (
+    id character varying(30),
+    load_date timestamp,
+    PRIMARY KEY (id)
 );
 ```{{execute T1}}
 

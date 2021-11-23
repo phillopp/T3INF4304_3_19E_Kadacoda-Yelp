@@ -2,7 +2,7 @@
 
 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres --name yelp_data phillopp/t3inf4303_3_19e_yelp:latest
 
-sleep 5s
+#sleep 5s
 
 docker exec -it yelp_data bash
 psql
