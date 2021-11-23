@@ -34,7 +34,7 @@ CREATE TABLE vault.sat_business_hours (
     ressource integer,
     weekday character varying(10),
     opening_hours character varying(100),
-    PRIMARY KEY (business_id, load_date)
+    PRIMARY KEY (business_id, load_date, weekday)
 );
 
 CREATE TABLE vault.sat_business_attributes (
@@ -43,7 +43,7 @@ CREATE TABLE vault.sat_business_attributes (
     ressource integer,
     attribute character varying(200),
     value character varying(200),
-    PRIMARY KEY (business_id, load_date)
+    PRIMARY KEY (business_id, load_date, attribute)
 );
 
 CREATE TABLE vault.sat_business_categories (
@@ -51,7 +51,7 @@ CREATE TABLE vault.sat_business_categories (
     load_date timestamp default current_timestamp,
     ressource integer,
     category character varying(100),
-    PRIMARY KEY (business_id, load_date),
+    PRIMARY KEY (business_id, load_date, category),
     CONSTRAINT fk_business_id
         FOREIGN KEY(business_id) 
         REFERENCES vault.hub_user(id)
@@ -62,7 +62,7 @@ CREATE TABLE vault.sat_business_checkin (
     load_date timestamp default current_timestamp,
     ressource integer,
     checkin_date date,
-    PRIMARY KEY (business_id, load_date),
+    PRIMARY KEY (business_id, load_date, checkin_date),
     CONSTRAINT fk_business_id
         FOREIGN KEY(business_id) 
         REFERENCES vault.hub_user(id)
