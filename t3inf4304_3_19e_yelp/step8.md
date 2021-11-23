@@ -13,7 +13,7 @@ Im Ressource-Feld wird die Herkunft der Daten gespeichert.
 ```
 CREATE TABLE vault.sat_business (
     business_id character varying(25),
-    load_date timestamp,
+    load_date timestamp default current_timestamp,
     ressource integer,
     name character varying(200),
     address character varying(500),
@@ -30,7 +30,7 @@ CREATE TABLE vault.sat_business (
 
 CREATE TABLE vault.sat_business_hours (
     business_id character varying(25),
-    load_date timestamp,
+    load_date timestamp default current_timestamp,
     ressource integer,
     weekday character varying(10),
     opening_hours character varying(100),
