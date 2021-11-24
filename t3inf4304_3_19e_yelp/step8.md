@@ -1,4 +1,4 @@
-In der folgenden Liste sind alle Attribute aufgelistet, die noch nicht durch die Hub-Tabelle abgebildet worden sind.
+Zuerst werden die Sat-Tabellen zum Hub `hub_business` erstellt. In der folgenden Liste sind alle Attribute und Rohdaten-Tabellen aufgelistet, die noch nicht durch die Hub-Tabelle oder einer anderen Tabelle abgebildet worden sind und eine Verbindung zur `staging.business`-Tabelle haben.
 
 - business(~~business_id,~~ name, address, city, state, postal_code, latitude, longitude, stars, review_count, is_open)
 - business_hours(business_id, weekday, opening_hours)
@@ -6,15 +6,13 @@ In der folgenden Liste sind alle Attribute aufgelistet, die noch nicht durch die
 - business_categories(business_id, category)
 - checking(business_id, checkin)
 
-Um eine passende Verlinkung von Hub- und Sat-Tabellen zu haben, müssen die Sat-Tabellen den Primär-Schlüssel der Hub-Tabelle als Fremdschlüssel speichern. Als Primärschlüssel wird die Kombination des Fremdschlüssels und des Lade Datums genutzt.
-
-Im Ressource-Feld wird die Herkunft der Daten gespeichert.
+Wie im vorherigen Schritt erwähnt, besitzen Sat-Tabellen die Primärschlüssel ihrer zugehörogen Hub- oder Link-Tabelle als Fremdschlüssel. Der Primärschlüssel der Sat-Tabelle setzt sich aus den Fremdschlüssel und dem Ladedatum zusammen.
 
 ```
 CREATE TABLE vault.sat_business (
     business_id character(22),
     load_date timestamp default current_timestamp,
-    ressource integer,
+    record_source integer,
     name character varying(200),
     address character varying(500),
     city character varying(200),
@@ -31,7 +29,7 @@ CREATE TABLE vault.sat_business (
 CREATE TABLE vault.sat_business_hours (
     business_id character(22),
     load_date timestamp default current_timestamp,
-    ressource integer,
+    record_source integer,
     weekday character varying(10),
     opening_hours character varying(100),
     PRIMARY KEY (business_id, load_date, weekday)
@@ -40,7 +38,7 @@ CREATE TABLE vault.sat_business_hours (
 CREATE TABLE vault.sat_business_attributes (
     business_id character(22),
     load_date timestamp default current_timestamp,
-    ressource integer,
+    record_source integer,
     attribute character varying(200),
     value character varying(200),
     PRIMARY KEY (business_id, load_date, attribute)
@@ -49,7 +47,7 @@ CREATE TABLE vault.sat_business_attributes (
 CREATE TABLE vault.sat_business_categories (
     business_id character(22),
     load_date timestamp default current_timestamp,
-    ressource integer,
+    record_source integer,
     category character varying(100),
     PRIMARY KEY (business_id, load_date, category),
     CONSTRAINT fk_business_id
@@ -60,7 +58,7 @@ CREATE TABLE vault.sat_business_categories (
 CREATE TABLE vault.sat_business_checkin (
     business_id character(22),
     load_date timestamp default current_timestamp,
-    ressource integer,
+    record_source integer,
     checkin_date date,
     PRIMARY KEY (business_id, load_date, checkin_date),
     CONSTRAINT fk_business_id

@@ -1,6 +1,6 @@
-Im nächsten Schritt werden die Daten in die Link-Tabellen eingetragen.
+Nachdem die Hub-Tabellen beladen wurden, sind die Link-Tabellen an der Reihe.
 
-Da es sich um Teile des kompletten Datensatzes handelt, wird beim Einfügen überprüft, ob der jeweilige Fremdschlüssel des Datensatzes in der Hub-Tabelle vorhanden ist. 
+Im SQL-Befehl erfolgt die Beladung nur mit Datensätzen, die in die Hub-Tabelle geladen wurden. Dadurch werden Constraint-Probleme umgangen, da es sich hier nicht um das komplette Datenset handelt.
 
 ```
 INSERT INTO vault.link_review (id, business_id, user_id)

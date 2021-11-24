@@ -1,16 +1,17 @@
-Für die Hub-Tabelle `User` stehen noch folgende Staging-Tabellen und Attribute offen:
+Äquivalten zu den Sat-Tabellen zuvor, ist es mit den Sat-Tabellen für die Hub-Tabelle `user`.
 
 - user(~~user_id,~~ user_name, review_count, yelping_since, useful, funny, cool, friends)
-- user_friends(~~user_id, friend_id~~)
 - user_elite(user_id, elite_year)
 
-Die `User_Friends` Tabelle ist mit der Erstellung der Link-Tabelle vollständig abgebildet und muss nicht durch eine Sat-Tabelle erweitert werden.
+Die `staging.user_friends`-Tabelle ist bereits durch ihre Link-Implementierung vollständig abgebildet worden. Dadurch erhält sie keine Sat-Tabelle.
+
+Für die Sat-Tabellen sieht der SQL-Befehl wie folgt aus:
 
 ```
 CREATE TABLE vault.sat_user (
     user_id character(22),
     load_date timestamp default current_timestamp,
-    ressource integer,
+    record_source integer,
     user_name character varying(200),
     review_count integer,
     yelping_since timestamp,
@@ -26,7 +27,7 @@ CREATE TABLE vault.sat_user (
 CREATE TABLE vault.sat_user_elite (
     user_id character(22),
     load_date timestamp default current_timestamp,
-    ressource integer,
+    record_source integer,
     elite_year character varying(5),
     PRIMARY KEY (user_id, load_date),
     CONSTRAINT fk_user_id

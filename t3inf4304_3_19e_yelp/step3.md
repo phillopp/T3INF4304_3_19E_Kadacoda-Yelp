@@ -1,14 +1,13 @@
-Nachdem im vorherigen Schritt kurz eingeleitet wurde, um was es sich bei einer Hub-Tabelle handelt, werden in diesem Schritt die Hub-Tabelle identifiziert und im nächsten Schritt erstellt.
-
-Schaut man in den 10 verfügbaren Tabellen, welche einen eigenen Primärschlüssel haben, bleiben folgende drei übrig:
+Im vorheringen Schritt wurde kurz eingeleitet, um was es sich bei Hubs handelt. Wenn man nun die vorhandenen Staging-Tabellen betrachtet und nach eindeutige Objekte mit Business-Schlüssel such, findet man folgende Tabellen:
 
 - Business
 - Review
 - User
 
-Jedoch hat die Review-Tabelle zu ihrem eigenen Primärschlüssel zwei Fremdschlüssel zu Business und User. Daher fällt sie als Hub-Kandidat raus.
+Nun prüft man, ob die drei Tabellen keine Fremdnschlüssel enthalten. Sollten sie einen Fremdschlüssel enthalten, handelt es sich um einen Link. Dadurch bleiben noch die folgenden zwei Tabellen als Hubs übrig:
 
-In einer Hub-Tabelle werden nur eindeutige Daten gespeichert, die sich nicht ändern. Dadurch fallen die anderen beiden Tabellen nicht raus. Es werden lediglich diese Attribute übernommen.
+- Business
+- User
 
 ---
 
