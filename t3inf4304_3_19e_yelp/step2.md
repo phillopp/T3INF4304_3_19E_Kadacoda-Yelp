@@ -15,4 +15,4 @@ Um die Daten nun in ein Data Vault speichern zu können, müssen passende Tabell
 
 1. **Hub-Tabellen**: Stellen eindeutige Objekte mittels eines Business-Schlüssels dar. Er enthält keine Fremdschlüssel.
 2. **Link-Tabellen**: Stellen die Verbindung zwischen Objekten dar.
-3. **Sat-Tabellen**: Beinhalten zusätzliche Informationen zu Hub- oder Link-Tabellen.[1, 2]
+3. **Sat-Tabellen**: Beinhalten zusätzliche Informationen zu Hub- oder Link-Tabellen. [1, 2]
