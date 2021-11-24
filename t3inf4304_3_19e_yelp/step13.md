@@ -22,7 +22,7 @@ INSERT INTO vault.sat_business_categories (business_id, category)
     WHERE business_id IN (SELECT id FROM vault.hub_business);
 
 INSERT INTO vault.sat_business_checkin (business_id, checkin_date)
-    SELECT business_id, checking_date
-    FROM staging.business_checkin
+    SELECT business_id, checkin_date
+    FROM staging.checkin
     WHERE business_id IN (SELECT id FROM vault.hub_business);
 ```{{execute T1}}
