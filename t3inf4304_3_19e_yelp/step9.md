@@ -8,7 +8,7 @@ Die `User_Friends` Tabelle ist mit der Erstellung der Link-Tabelle vollständig 
 
 ```
 CREATE TABLE vault.sat_user (
-    user_id character varying(30),
+    user_id character(22),
     load_date timestamp default current_timestamp,
     ressource integer,
     user_name character varying(200),
@@ -24,7 +24,7 @@ CREATE TABLE vault.sat_user (
 );
 
 CREATE TABLE vault.sat_user_elite (
-    user_id character varying(30),
+    user_id character(22),
     load_date timestamp default current_timestamp,
     ressource integer,
     elite_year character varying(5),

@@ -8,13 +8,13 @@ Die zwei Hub-Tabellen werden mit dem folgenden Befehl erstellt.
 
 ```
 CREATE TABLE vault.hub_business (
-    id character varying(25),
+    id character(22),
     load_date timestamp default current_timestamp,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE vault.hub_user (
-    id character varying(30),
+    id character(22),
     load_date timestamp default current_timestamp,
     PRIMARY KEY (id)
 );

@@ -6,8 +6,8 @@ Auch hier müssen aus den Staging-Tabellen die überflüssen Informationen gestr
 
 ```
 CREATE TABLE vault.link_review (
-    id character varying(30),
-    business_id character varying(25),
+    id character(22),
+    business_id character(22),
     user_id character varying(30),
     load_date timestamp default current_timestamp,
     PRIMARY KEY (id),
@@ -20,8 +20,8 @@ CREATE TABLE vault.link_review (
 );
 
 CREATE TABLE vault.link_user_friends (
-    user_id character varying(30),
-    friend_id character varying(30),
+    user_id character(22),
+    friend_id character(22),
     load_date timestamp default current_timestamp,
     PRIMARY KEY (user_id, friend_id),
     CONSTRAINT fk_user_id
@@ -33,8 +33,8 @@ CREATE TABLE vault.link_user_friends (
 );
 
 CREATE TABLE vault.link_tip (
-    business_id character varying(25),
-    user_id character varying(30),
+    business_id character(22),
+    user_id character(22),
     load_date timestamp default current_timestamp,
     PRIMARY KEY (business_id, user_id),
     CONSTRAINT fk_business_id

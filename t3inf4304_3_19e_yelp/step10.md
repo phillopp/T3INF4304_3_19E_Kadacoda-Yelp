@@ -5,7 +5,7 @@ Auch die Link-Tabellen `Review`und `Tip` haben weitere Attribute, die in eine Sa
 
 ```
 CREATE TABLE vault.sat_review (
-    business_id character varying(25),
+    business_id character(22),
     user_id character varying(30),
     load_date timestamp default current_timestamp,
     ressource integer,
@@ -25,7 +25,7 @@ CREATE TABLE vault.sat_review (
 );
 
 CREATE TABLE vault.sat_tip (
-    business_id character varying(25),
+    business_id character(22),
     user_id character varying(30),
     load_date timestamp default current_timestamp,
     ressource integer,
