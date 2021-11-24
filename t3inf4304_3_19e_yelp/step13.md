@@ -1,4 +1,4 @@
-Sat-Tabellen Business
+Zum Schluss werden noch die Sat-Daten in die Tabellen geladen. Auch hier wird überprüft, dass nur Daten zu vorhandenen Geschäften geladen werden.
 
 ```
 INSERT INTO vault.sat_business (business_id, name, address, city, state, postal_code, latitude, longitude, stars, review_count, is_open)
