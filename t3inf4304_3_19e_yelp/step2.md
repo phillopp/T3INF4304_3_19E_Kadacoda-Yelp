@@ -1,4 +1,4 @@
-Nach dem anlegen der Tabellen und laden der Daten, stehen folgende Tabellen zur Verfügung:
+Nachdem die Tabellen erfolgreich angelegt wurden und einige Daten aus dem Yelp-Datensatz in diese Tabellen geladen wurde, ist die unten stehende Liste an Tabellen und den dahinterstehenden Attributen zur Verfügbar:
 
 - business(business_id, name, address, city, state, postal_code, latitude, longitude, stars, review_count, is_open)
 - business_hours(business_id, weekday, opening_hours)
@@ -11,7 +11,7 @@ Nach dem anlegen der Tabellen und laden der Daten, stehen folgende Tabellen zur 
 - user_friends(user_id, friend_id)
 - user_elite(user_id, elite_year)
 
-Für das Data Vault stehen drei Tabellen-Typen zur Verfügung:
+Um die Daten nun in ein Data Vault speichern zu können, müssen passende Tabellen dafür erstellt werden. In einem Data Vault stehen drei verschiedene Typen für die Tabellen zur Verfügung.
 
 1. **Hub-Tabellen**: Stellen eindeutige Objekte mittels eines Business-Schlüssels dar. Er enthält keine Fremdschlüssel.
 2. **Link-Tabellen**: Stellen die Verbindung zwischen Objekten dar.
