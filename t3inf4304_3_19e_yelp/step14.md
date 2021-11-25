@@ -9,5 +9,6 @@ INSERT INTO vault.sat_user (user_id, user_name, review_count, yelping_since, use
 INSERT INTO vault.sat_user_elite (user_id, elite_year)
     SELECT user_id, elite_year
     FROM staging.user_elite
-    WHERE user_id IN (SELECT id FROM vault.hub_user);
+    WHERE user_id IN (SELECT id FROM vault.hub_user)
+ON CONFLICT DO NOTHING;
 ```{{execute T1}}

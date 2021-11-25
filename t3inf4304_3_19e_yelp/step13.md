@@ -21,7 +21,7 @@ INSERT INTO vault.sat_business_categories (business_id, category)
     FROM staging.business_categories
     WHERE business_id IN (SELECT id FROM vault.hub_business)
     AND category IS NOT NULL
-    ON CONFLICT DO NOTHING;
+ON CONFLICT DO NOTHING;
 
 INSERT INTO vault.sat_business_checkin (business_id, checkin_date)
     SELECT business_id, checkin_date

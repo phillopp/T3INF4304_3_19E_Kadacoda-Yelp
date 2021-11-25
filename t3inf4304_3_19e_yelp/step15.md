@@ -10,7 +10,8 @@ INSERT INTO vault.sat_tip (business_id, user_id, tip_text, tip_date, compliment_
     SELECT business_id, user_id, tip_text, tip_date, compliment_count
     FROM staging.tip
     WHERE user_id IN (SELECT id FROM vault.hub_user)
-    AND business_id IN (SELECT id FROM vault.hub_business);
+    AND business_id IN (SELECT id FROM vault.hub_business)
+ON CONFLICHT DO NOTHING;
 ```{{execute T1}}
 
 Nun wurden alle Daten als Data Vault abgespeichert.

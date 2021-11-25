@@ -35,6 +35,6 @@ CREATE TABLE vault.sat_tip (
         REFERENCES vault.hub_user(id),
     CONSTRAINT fk_business_id
         FOREIGN KEY(business_id) 
-        REFERENCES vault.hub_user(id)
+        REFERENCES vault.hub_business(id)
 );
 ```{{execute T1}}
