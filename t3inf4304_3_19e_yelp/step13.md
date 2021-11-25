@@ -19,7 +19,8 @@ INSERT INTO vault.sat_business_attributes (business_id, attribute, value)
 INSERT INTO vault.sat_business_categories (business_id, category)
     SELECT business_id, category
     FROM staging.business_categories
-    WHERE business_id IN (SELECT id FROM vault.hub_business);
+    WHERE business_id IN (SELECT id FROM vault.hub_business)
+    AND category NOT NULL;
 
 INSERT INTO vault.sat_business_checkin (business_id, checkin_date)
     SELECT business_id, checkin_date

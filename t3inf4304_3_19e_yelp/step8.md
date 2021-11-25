@@ -52,7 +52,7 @@ CREATE TABLE vault.sat_business_categories (
     PRIMARY KEY (business_id, load_date, category),
     CONSTRAINT fk_business_id
         FOREIGN KEY(business_id) 
-        REFERENCES vault.hub_user(id)
+        REFERENCES vault.hub_business(id)
 );
 
 CREATE TABLE vault.sat_business_checkin (
@@ -63,6 +63,6 @@ CREATE TABLE vault.sat_business_checkin (
     PRIMARY KEY (business_id, load_date, checkin_date),
     CONSTRAINT fk_business_id
         FOREIGN KEY(business_id) 
-        REFERENCES vault.hub_user(id)
+        REFERENCES vault.hub_business(id)
 );
 ```{{execute T1}}
