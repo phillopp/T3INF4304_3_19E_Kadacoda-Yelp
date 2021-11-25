@@ -52,7 +52,7 @@ CREATE TABLE staging.review(
     review_id character(22),
     business_id character(22),
     user_id character(22),
-    starts integer,
+    stars integer,
     useful integer,
     funny integer,
     cool integer,

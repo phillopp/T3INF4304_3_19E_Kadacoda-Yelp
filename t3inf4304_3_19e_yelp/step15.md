@@ -2,7 +2,7 @@ Im letzten Schritt für dieses Tutorial werden die Daten der letzten Sat-Tabelle
 
 ```
 INSERT INTO vault.sat_review (review_id, stars, useful, funny, cool, review_text)
-    SELECT review_id, stars, usefuk, funny, cool, review_text
+    SELECT review_id, stars, useful, funny, cool, review_text
     FROM staging.review
     WHERE review_id IN (SELECT id FROM vault.link_review);
 
