@@ -6,6 +6,10 @@
   "details": {
     "steps": [
       {
+        "title": "Daten vorbereiten",
+        "text": "vorbereitung.md"
+      },
+      {
         "title": "Vorbereitung",
         "text": "step1.md"
       },
@@ -30,39 +34,39 @@
         "text": "step6.md"
       },
       {
-        "title": "Step 7",
+        "title": "Sat-Tabellen",
         "text": "step7.md"
       },
       {
-        "title": "Step 8",
+        "title": "Sat-Tabellen für Business-Hub erstellen",
         "text": "step8.md"
       },
       {
-        "title": "Step 9",
+        "title": "Sat-Tabellen für User-Hub erstellen",
         "text": "step9.md"
       },
       {
-        "title": "Step 10",
+        "title": "Sat-Tabellen für Links erstellen",
         "text": "step10.md"
       },
       {
-        "title": "Step 11",
+        "title": "Daten in Hubs laden",
         "text": "step11.md"
       },
       {
-        "title": "Step 12",
+        "title": "Daten in Links laden",
         "text": "step12.md"
       },
       {
-        "title": "Step 13",
+        "title": "Daten in Sat-Tabellen laden",
         "text": "step13.md"
       },
       {
-        "title": "Step 14",
+        "title": "Daten in Sat-Tabellen laden",
         "text": "step14.md"
       },
       {
-        "title": "Step 15",
+        "title": "Daten in Sat-Tabellen laden",
         "text": "step15.md"
       },
       {

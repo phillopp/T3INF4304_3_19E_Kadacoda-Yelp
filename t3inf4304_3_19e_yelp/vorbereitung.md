@@ -1,0 +1,5 @@
+Bevor man mit dem Erstellen der Datenbank-Tabellen beginnt, sollte man sich gedanken machen, wie man die Daten abspeichern möchte.
+
+Beispielsweise wird das Yelp-Datenset in JSON-Dateien veröffentlicht. Diese haben unter anderem bei den Daten zu den Businesses Kategorien und Öffnungszeiten als Kind-Attribute gespeichert. Diese Daten können entweder als JSON-String in die Datenbank unter Öffnungszeiten gespeichert werden oder die Daten werden in separate Dateien gespeichert und später in eine separate Tabelle gespeichert.
+
+Für dieses Tutorial wurde entschieden, solche Daten in extra Tabellen zu speichern. Dazu wurden vorab die JSON-Dateien eingelesen, die Daten getrennt und als CSV-Dateien gespeichert. CSV-Dateien haben den Vorteil, direkt von Postgres eingelesen zu werden und benötigen weniger Speicherplatz.
